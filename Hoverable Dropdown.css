@@ -1,0 +1,250 @@
+/* based on original design by FeikeB:
+   https://forum.obsidian.md/t/want-a-multi-level-dropdown-menu-inside-your-notes-you-can-i-built-one/40501
+   converted to callout by sailKite (https://github.com/sailKiteV) 
+   Customized by Effaly: https://github.com/Effaly 
+   Version: 1.0.0 */
+
+
+.callout[data-callout="navmenu"] {
+
+    /* CUSTOM LINK COLORS */  
+
+    /* BLACK AND WHITE */
+    &[data-callout-metadata*="white"] { --custom-link-color: rgb(253, 253, 253); }
+    &[data-callout-metadata*="light-grey"] { --custom-link-color: rgb(179, 179, 179); }
+    &[data-callout-metadata*="dark-grey"] { --custom-link-color: rgb(71, 71, 71); }
+    &[data-callout-metadata*="black"] { --custom-link-color: rgb(0, 0, 0); }
+    
+    /* PASTEL COLORS */
+    &[data-callout-metadata*="pastel-pink"] { --custom-link-color: rgb(255, 153, 204); }
+    &[data-callout-metadata*="pastel-peach"] { --custom-link-color: rgb(255, 204, 204); }
+    &[data-callout-metadata*="pastel-purple1"] { --custom-link-color: rgb(217, 179, 255); }
+    &[data-callout-metadata*="pastel-purple2"] { --custom-link-color: rgb(236, 179, 255); }
+    &[data-callout-metadata*="pastel-green"] { --custom-link-color: rgb(204, 255, 204); }
+    &[data-callout-metadata*="pastel-blue"] { --custom-link-color: rgb(159, 225, 245); }
+    &[data-callout-metadata*="pastel-yellow"] { --custom-link-color: rgb(244, 245, 211); }
+
+     /* 🌟 CUSTOM BACKGROUND 🌟 */ 
+    
+     /* ⚪ LIGHT */
+    &[data-callout-metadata*="semi-white"] { --custom-background:rgba(255, 255, 255, 0.5);} /* White with 50% opacity */
+
+    &[data-callout-metadata*="light-atom1"] { --custom-background:rgba(250,250,250,1.0); }
+    &[data-callout-metadata*="light-atom2"] { --custom-background:rgba(219,219,220,1.0); }
+
+    &[data-callout-metadata*="light-everforest1"] { --custom-background:rgba(253,246,227,1.0); }
+    &[data-callout-metadata*="light-everforest2"] { --custom-background:rgba(240,237,216,1.0); }
+
+    &[data-callout-metadata*="light-gruv1"] { --custom-background:rgba(249,245,215,1.0); }
+    &[data-callout-metadata*="light-gruv2"] { --custom-background:rgba(230,215,178,1.0); }
+
+    &[data-callout-metadata*="sandy1"] { --custom-background:rgba(240,234,226,1.0); }
+    &[data-callout-metadata*="sandy2"] { --custom-background:rgba(230,223,216,1.0); }
+
+    &[data-callout-metadata*="light-mint1"] { --custom-background:rgba(189,214,219,1.0); }
+    &[data-callout-metadata*="light-mint2"] { --custom-background:rgba(136,182,191,1.0); }
+
+    &[data-callout-metadata*="light-nord1"] { --custom-background:rgba(236,239,244,1.0); }
+    &[data-callout-metadata*="light-nord2"] { --custom-background:rgba(229,233,240,1.0); }
+
+    &[data-callout-metadata*="light-notion1"] { --custom-background:rgba(255,255,255,1.0); }
+    &[data-callout-metadata*="light-notion2"] { --custom-background:rgba(227,230,232,1.0); }
+
+    &[data-callout-metadata*="lumi1"] { --custom-background:rgba(242,238,232,1.0); }
+    &[data-callout-metadata*="lumi2"] { --custom-background:rgba(236,231,223,1.0); }
+
+    &[data-callout-metadata*="light-solar1"] { --custom-background:rgba(253,246,227,1.0); }
+    &[data-callout-metadata*="light-solar2"] { --custom-background:rgba(224,215,184,1.0); }
+
+    /* ⚫ DARK */
+    &[data-callout-metadata*="semi-black"] { --custom-background:rgba(0, 0, 0, 0.5); } /* Black with 50% opacity */
+
+    &[data-callout-metadata*="amoled1"] { --custom-background:rgba(10,10,10,1.0); }
+    &[data-callout-metadata*="amoled2"] { --custom-background:rgba(10,10,10,1.0); }
+
+    &[data-callout-metadata*="dark-atom1"] { --custom-background:rgba(39,43,52,1.0); }
+    &[data-callout-metadata*="dark-atom2"] { --custom-background:rgba(26,30,36,1.0); }
+
+    &[data-callout-metadata*="biscuit1"] { --custom-background:rgba(69,54,54,1.0); }
+    &[data-callout-metadata*="biscuit2"] { --custom-background:rgba(26,21,21,1.0); }
+
+    &[data-callout-metadata*="coffee1"] { --custom-background:rgba(58,56,69,1.0); }
+    &[data-callout-metadata*="coffee2"] { --custom-background:rgba(38,37,45,1.0); }
+
+    &[data-callout-metadata*="dark1"] { --custom-background:rgba(42,42,42,1.0); }
+    &[data-callout-metadata*="dark2"] { --custom-background:rgba(0,0,0,1.0); }
+
+    &[data-callout-metadata*="dracula1"] { --custom-background:rgba(40,42,54,1.0); }
+    &[data-callout-metadata*="dracula2"] { --custom-background:rgba(26,27,35,1.0); }
+
+    &[data-callout-metadata*="dark-everforest1"] { --custom-background:rgba(47,56,62,1.0); }
+    &[data-callout-metadata*="dark-everforest2"] { --custom-background:rgba(34,40,44,1.0); }
+
+    &[data-callout-metadata*="flexoki1"] { --custom-background:rgba(28,27,26,1.0); }
+    &[data-callout-metadata*="flexoki2"] { --custom-background:rgba(8,7,7,1.0); }
+
+    &[data-callout-metadata*="dark-gruv1"] { --custom-background:rgba(40,40,40,1.0); }
+    &[data-callout-metadata*="dark-gruv2"] { --custom-background:rgba(19,21,22,1.0); }
+
+    &[data-callout-metadata*="kana1"] { --custom-background:rgba(31,31,40,1.0); }
+    &[data-callout-metadata*="kana2"] { --custom-background:rgba(11,11,15,1.0); }
+
+    &[data-callout-metadata*="dark-mint1"] { --custom-background:rgba(18,31,33,1.0); }
+    &[data-callout-metadata*="dark-mint2"] { --custom-background:rgba(5,9,10,1.0); }
+
+    &[data-callout-metadata*="dark-nord1"] { --custom-background:rgba(67,76,94,1.0); }
+    &[data-callout-metadata*="dark-nord2"] { --custom-background:rgba(46,52,64,1.0); }
+
+    &[data-callout-metadata*="notion1"] { --custom-background:rgba(61,68,72,1.0); }
+    &[data-callout-metadata*="notion2"] { --custom-background:rgba(47,52,55,1.0); }
+
+    &[data-callout-metadata*="nord-dark1"] { --custom-background:rgba(46,52,64,1.0); }
+    &[data-callout-metadata*="nord-dark2"] { --custom-background:rgba(30,34,41,1.0); }
+
+    &[data-callout-metadata*="rose1"] { --custom-background:rgba(25,23,36,1.0); }
+    &[data-callout-metadata*="rose2"] { --custom-background:rgba(11,10,16,1.0); }
+
+    &[data-callout-metadata*="rosebox1"] { --custom-background:rgba(35,35,35,1.0); }
+    &[data-callout-metadata*="rosebox2"] { --custom-background:rgba(25,25,25,1.0); }
+
+    &[data-callout-metadata*="royal1"] { --custom-background:rgba(30,30,36,1.0); }
+    &[data-callout-metadata*="royal2"] { --custom-background:rgba(20,20,25,1.0); }
+
+    &[data-callout-metadata*="dark-solar1"] { --custom-background:rgba(7,54,66,1.0); }
+    &[data-callout-metadata*="dark-solar2"] { --custom-background:rgba(0,33,41,1.0); }
+
+    /* END */ 
+   
+    --item-gap: 6px;
+    background-color: transparent;
+    --link-color: var(--custom-link-color);
+    --link-color-hover: var(--custom-link-color);
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: visible;
+    z-index: 10;
+
+    & > .callout-content ul li a {
+        pointer-events: auto;
+    }
+
+    & .callout-content a {
+        position: relative;
+    }
+
+    & * {
+        pointer-events: auto;
+        
+        :is(:hover > *) {
+            transition-delay: 500ms !important;
+        }
+    }
+
+    & > .callout-title { display: none; }
+
+    & > .callout-content {
+        overflow: visible;
+        isolation: isolate;
+        z-index: 10;
+
+        & :is(.list-bullet, .list-collapse-indicator) { display: none; }
+
+        & ul {
+            display: flex;
+            position: relative;
+            padding-inline-start: 0;
+            z-index: 10;
+
+            &::before, &::after { display: none; }
+            
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: unset;
+                border: unset;
+            }
+            
+            & li {
+                background: var(--custom-background);
+                border: 1px solid var(--custom-link-color); /* Border color #2D22C6 */
+                color: var(--custom-link-color) !important; /* Text color #2D22C6 */
+                font-weight: bold;
+                min-width: 200px;
+                min-height: 30px;
+                transition: background 0.2s, color 0.2s, transform 0.2s;
+                margin: 0px var(--item-gap) var(--item-gap) 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px #414141;
+                position: relative;
+                text-align: center;
+                list-style: none;
+                display: block;
+                z-index: 10;
+                
+                &:not(:hover, :has(:hover)) {
+                    overflow: hidden;
+                }
+                
+                & > ul > li {
+                    transition: transform 0.2s, opacity 0.2s;
+                    transform: translateY(150%);
+                    opacity: 0;
+                }
+                
+                &:is(:hover, :has(:hover)) {
+                    background-color:var(--custom-background); /* Original: #08040c */
+                    filter: brightness(0.9); /* 0.8  to make it darker, 1.1 to make to brigher */
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        width: calc(100% + var(--item-gap));
+                        height: calc(100% + var(--item-gap));
+                    }
+                    & > ul > li {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            & ul {
+                position: absolute;
+                flex-direction: column;
+                top: calc(100% + var(--item-gap));
+
+                & > li > ul {
+                    top: 0;
+                    left: calc(100% + var(--item-gap));
+                    
+                    & > li {
+                        transform: translateX(195px);
+                    }
+                }
+            }
+        }
+    }
+
+    .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(> .markdown-rendered > &) {
+        contain: none !important;
+
+        &:hover {
+            contain: none !important;
+            overflow: visible;
+        }
+    }
+}
+
+div:has(> .callout[data-callout="navmenu"]) {
+    position: relative;
+    z-index: 10;
+}
