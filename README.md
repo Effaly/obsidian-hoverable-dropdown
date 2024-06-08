@@ -20,12 +20,12 @@ This is the code from the example above:
 >[!navmenu|white|coffee2]
 >- Hover
 >- Over 
->	- More menus
+>  - More menus
 >- Me
->	- Another menu
->		- Even more menus
+>  - Another menu
+>    - Even more menus
 >- !!!
->	- As many as you need
+>  - As many as you need
 ```
 
 The line `[!navmenu|white|coffee2]` can be modified.
