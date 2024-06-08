@@ -4,7 +4,7 @@ Converted to callout by sailKite (https://github.com/sailKiteV)
 Customized by Effaly: https://github.com/Effaly 
 
 # What it does
-[](/example.gif)
+![](/example.gif)
 
 # How to install 
 1. Download the Hoverable Dropdown.css file 
