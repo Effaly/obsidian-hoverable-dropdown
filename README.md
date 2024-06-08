@@ -1,7 +1,18 @@
 # Origin
-- Based on original design by FeikeB: https://forum.obsidian.md/t/want-a-multi-level-dropdown-menu-inside-your-notes-you-can-i-built-one/40501
+# Customized CSS Snippet
+
+This CSS snippet is based on the original design by FeikeB and converted to callout by sailKite. I have customized the colors to better suit my preferences.
+
+## Original Attribution
+- Original design by FeikeB: [link](https://forum.obsidian.md/t/want-a-multi-level-dropdown-menu-inside-your-notes-you-can-i-built-one/40501)
 - Converted to callout by sailKite
-- Customized by Effaly: https://github.com/Effaly 
+
+## Changes Made:
+- Changed background
+- Changed link colors
+
+## Licensing
+The original code did not come with an explicit license. By modifying and redistributing this code, I intend to share it under the MIT License. If the original authors have any concerns, please contact me at [your email].
 
 # What it does
 ![](/example.gif)
