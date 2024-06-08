@@ -33,6 +33,9 @@ The line `[!navmenu|white|coffee2]` can be modified.
 Instead of `white`, you can add all available **LINK COLORS**. 
 Instead of `coffee2` you can use any available **BACKGROUND COLOR**
 
+# Note 
+It works best when you additionally use [the wide view from the modular css layout snippet](https://github.com/efemkay/obsidian-modular-css-layout?tab=readme-ov-file#wide-views).
+
 # Color scheme 
 Apart from a neutral white, grey, black palett for links and some pastel backgrounds, the colors were picked from the [extended](https://github.com/mgmeyers/obsidian-style-settings) [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) themes. Colors from themes come with their base color and an accent color. 
 
