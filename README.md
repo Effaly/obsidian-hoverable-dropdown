@@ -1,7 +1,7 @@
 # Origin
-Based on original design by FeikeB: https://forum.obsidian.md/t/want-a-multi-level-dropdown-menu-inside-your-notes-you-can-i-built-one/40501
-Converted to callout by sailKite (https://github.com/sailKiteV) 
-Customized by Effaly: https://github.com/Effaly 
+- Based on original design by FeikeB: https://forum.obsidian.md/t/want-a-multi-level-dropdown-menu-inside-your-notes-you-can-i-built-one/40501
+- Converted to callout by sailKite
+- Customized by Effaly: https://github.com/Effaly 
 
 # What it does
 ![](/example.gif)
@@ -11,8 +11,7 @@ Customized by Effaly: https://github.com/Effaly
 2. Open the Obsidian Vault folder in which you want to use this
 3. Open the `.obsidian` folder 
 4. Open the `snippets` folder and paste the file in there. If you don't have a `snippets` folder, create it. 
-5. Open the Vault in Obsidian. If you have it already open, press `Ctrl + P` and look for `Reload app without saving`
-6. Once done, go to Setting -> Appearance and scroll down
+6. Once done, go to Setting -> Appearance and scroll down (If you can't see it, close and reopen Obsidian)
 7. Toggle Hoverable Dropdown on 
 
 # How to Use 
