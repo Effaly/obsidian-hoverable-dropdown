@@ -12,7 +12,7 @@ This CSS snippet is based on the original design by FeikeB and converted to call
 - Changed link colors
 
 ## Licensing
-The original code did not come with an explicit license. By modifying and redistributing this code, I intend to share it under the MIT License. If the original authors have any concerns, please contact me at [your email].
+The original code did not come with an explicit license. By modifying and redistributing this code, I intend to share it under the MIT License. If the original authors have any concerns, please contact me.
 
 # What it does
 ![](/example.gif)
